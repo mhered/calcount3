@@ -13,3 +13,7 @@ $ pipenv shell
 (base)$ conda deactivate
 $ atri start
 ```
+Sources: 
+* Nutritional data of selected foods from https://www.webmd.com/diet/healthtool-food-calorie-counter
+* Estimated calories for the different nutrients from https://www.wikihow.com/Calculate-Food-Calories
+* Recommended daily intake of calories and nutrients from 
