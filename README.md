@@ -1,6 +1,8 @@
 # calcount3
 A simple calorie counter app made using the [Atri framework](https://github.com/Atri-Labs/atrilabs-engine) for Hacktoberfest'22
 
+See the [Demo in github pages](https://mhered.github.io/calcount3/)
+
 Note: there seems to be an incompatibility with conda installed in my system, the environment keeps activating itself when I issue `pipenv shell` and then it seems to cause errors:
 
 ```
