@@ -88,3 +88,35 @@ export function useTextBox1Cb() {
 }), [])
 	return { onClick }
 }
+export function useTextBox2Cb() {
+	const onClick = useCallback(callbackFactory("TextBox2", "Home", "/", "onClick", 
+			{
+  "handlers": [
+    {
+      "sendEventData": true
+    }
+  ],
+  "actions": [
+    {
+      "type": "do_nothing"
+    }
+  ]
+}), [])
+	return { onClick }
+}
+export function useTextBox3Cb() {
+	const onClick = useCallback(callbackFactory("TextBox3", "Home", "/", "onClick", 
+			{
+  "handlers": [
+    {
+      "sendEventData": true
+    }
+  ],
+  "actions": [
+    {
+      "type": "do_nothing"
+    }
+  ]
+}), [])
+	return { onClick }
+}

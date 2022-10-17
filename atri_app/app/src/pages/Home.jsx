@@ -9,7 +9,7 @@ import { DataTable } from "@atrilabs/react-component-manifests/src/manifests/Tab
 import { Dropdown } from "@atrilabs/react-component-manifests/src/manifests/Dropdown/Dropdown.tsx";
 import { Button } from "@atrilabs/react-component-manifests/src/manifests/Button/Button.tsx";
 import { TextBox } from "@atrilabs/react-component-manifests/src/manifests/TextBox/TextBox.tsx";
-import { useDiv1Cb, useDiv2Cb, useTable1Cb, useDropdown1Cb, useButton1Cb, useTextBox1Cb } from "../page-cbs/Home";
+import { useDiv1Cb, useDiv2Cb, useTable1Cb, useDropdown1Cb, useButton1Cb, useTextBox1Cb, useTextBox2Cb, useTextBox3Cb } from "../page-cbs/Home";
 import "../page-css/Home.css"
 
 export default function Home() {
@@ -46,6 +46,12 @@ const Button1Cb = useButton1Cb()
 const TextBox1Props = useStore((state)=>state["Home"]["TextBox1"]);
 const TextBox1IoProps = useIoStore((state)=>state["Home"]["TextBox1"]);
 const TextBox1Cb = useTextBox1Cb()
+const TextBox2Props = useStore((state)=>state["Home"]["TextBox2"]);
+const TextBox2IoProps = useIoStore((state)=>state["Home"]["TextBox2"]);
+const TextBox2Cb = useTextBox2Cb()
+const TextBox3Props = useStore((state)=>state["Home"]["TextBox3"]);
+const TextBox3IoProps = useIoStore((state)=>state["Home"]["TextBox3"]);
+const TextBox3Cb = useTextBox3Cb()
 
   return (<>
   <Div className="p-Home Div1" {...Div1Props} {...Div1Cb} {...Div1IoProps}>
@@ -53,6 +59,8 @@ const TextBox1Cb = useTextBox1Cb()
 </Div>
 <Div className="p-Home Div2" {...Div2Props} {...Div2Cb} {...Div2IoProps}>
 <TextBox className="p-Home TextBox1" {...TextBox1Props} {...TextBox1Cb} {...TextBox1IoProps}/>
+<TextBox className="p-Home TextBox2" {...TextBox2Props} {...TextBox2Cb} {...TextBox2IoProps}/>
+<TextBox className="p-Home TextBox3" {...TextBox3Props} {...TextBox3Cb} {...TextBox3IoProps}/>
 <Button className="p-Home Button1" {...Button1Props} {...Button1Cb} {...Button1IoProps}/>
 <Dropdown className="p-Home Dropdown1" {...Dropdown1Props} {...Dropdown1Cb} {...Dropdown1IoProps}/>
 </Div>

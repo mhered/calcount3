@@ -85,6 +85,7 @@ FOODS = [
         },
     ]
 
+
 def init_state(at: Atri):
     """
     This function is called everytime "Publish" button is hit in the editor.
@@ -101,9 +102,9 @@ def init_state(at: Atri):
         {"field": "calories", "headerName": "Calories (cal)", "type": "number"},
     ]
     
-
+    at.Table1.custom.rows =[]
     # add dropdown
-    at.Dropdown1.custom.values = [item['name'] for item in FOODS]
+    at.Dropdown1.custom.values = [""]+[item['name'] for item in FOODS]
 
 
 def handle_page_request(at: Atri, req: Request, res: Response, query: str):
@@ -120,11 +121,11 @@ def handle_event(at: Atri, req: Request, res: Response):
     """
     
     if at.Button1.onClick:
-        at.Button1.custom.text == "Added"
+        at.TextBox2.custom.text = f"Selected: {at.Dropdown1.custom.selectedValue}"
         # get food selected in Dropdown1
-        food_item = next(
-            (item for item in FOODS if item['name'] == at.Dropdown1.custom.selectedValue),
-             None)
-
+        food_item = [item for item in FOODS if item['name'] == at.Dropdown1.custom.selectedValue]
         # add row
-        at.Table1.custom.rows.append(food_item)
+        if food_item:
+            at.TextBox3.custom.text+=f"\t{food_item[0]}"
+            at.Table1.custom.rows.append(food_item[0]) 
+    

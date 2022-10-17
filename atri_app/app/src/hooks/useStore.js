@@ -82,6 +82,7 @@ const desktopModeProps = {
     "Dropdown1": {
       "custom": {
         "values": [
+          "",
           "1 cup milk",
           "1 apple",
           "1 orange",
@@ -111,6 +112,30 @@ const desktopModeProps = {
     "TextBox1": {
       "custom": {
         "text": "What did you eat today?"
+      },
+      "callbacks": {
+        "onClick": [
+          {
+            "sendEventData": true
+          }
+        ]
+      }
+    },
+    "TextBox2": {
+      "custom": {
+        "text": "Your text Here!"
+      },
+      "callbacks": {
+        "onClick": [
+          {
+            "sendEventData": true
+          }
+        ]
+      }
+    },
+    "TextBox3": {
+      "custom": {
+        "text": "Your text Here!"
       },
       "callbacks": {
         "onClick": [
