@@ -10,8 +10,8 @@ Note: there seems to be an incompatibility with conda installed in my system, th
 (base)$ conda deactivate
 $ pipenv install atri
 $ pipenv shell
-(base)$ conda deactivate
-$ atri start
+(calcount3)(base)$ conda deactivate
+(calcount3)$ atri start
 ```
 Sources: 
 * Nutritional data of selected foods from https://www.webmd.com/diet/healthtool-food-calorie-counter
@@ -20,12 +20,13 @@ Sources:
 
 ## Build and deploy app
 Update the [demo app](https://mhered.github.io/calcount3/) after `git commit` and `git push` of new source code
+
 Note: atri commands must run from source directory and inside the pipenv environment, so if neeced do:
 ```bash
-$ cd path-to/calcount3
+$ cd calcount3
 $ pipenv shell
-$ conda deactivate
-(calcount3)path-to/calcount3$
+(calcount3)(base)$ conda deactivate
+(calcount3)calcount3$
 ```
 Then build and deploy with:
 ```bash
